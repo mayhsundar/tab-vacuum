@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Tab Vacuum — Remove Duplicate Chrome Tabs in 1 Click</title>
+<meta name="description" content="Tab Vacuum is a free Chrome extension that removes duplicate tabs across all your windows and groups what's left by website — in one click. Open source, 100% local, no tracking." />
+<meta name="keywords" content="remove duplicate tabs chrome, duplicate tab remover, close duplicate tabs, chrome tab manager, group tabs by website, merge chrome windows, tab cleaner, tab organizer, declutter chrome, productivity extension" />
+<meta name="author" content="Tab Vacuum" />
+<link rel="canonical" href="https://YOUR-USERNAME.github.io/tab-vacuum/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Tab Vacuum — Remove Duplicate Chrome Tabs in 1 Click" />
+<meta property="og:description" content="One click vacuums duplicate tabs across all Chrome windows and groups what's left by website. Free, private, open source." />
+<meta property="og:image" content="https://YOUR-USERNAME.github.io/tab-vacuum/og.png" />
+<meta property="og:url" content="https://YOUR-USERNAME.github.io/tab-vacuum/" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Tab Vacuum — 1-click duplicate tab remover for Chrome" />
+<meta name="twitter:description" content="Click once. Duplicates gone. Survivors grouped by website. Free + open source." />
+<meta name="twitter:image" content="https://YOUR-USERNAME.github.io/tab-vacuum/og.png" />
+
+<link rel="icon" type="image/png" href="../icons/128.png" />
+
+<!-- Schema.org: SoftwareApplication (gets rich install card in Google) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Tab Vacuum",
+  "description": "Free Chrome extension that removes duplicate tabs across all windows and groups remaining tabs by website in one click.",
+  "operatingSystem": "Chrome",
+  "applicationCategory": "BrowserApplication",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "1" },
+  "url": "https://YOUR-USERNAME.github.io/tab-vacuum/",
+  "downloadUrl": "https://chrome.google.com/webstore/detail/YOUR-EXTENSION-ID",
+  "softwareVersion": "1.0",
+  "author": { "@type": "Person", "name": "YOUR-NAME" }
+}
+</script>
+
+<!-- Schema.org: FAQPage (helps AI assistants quote you directly) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I remove duplicate tabs in Chrome?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Install Tab Vacuum from the Chrome Web Store, then click its toolbar icon. It removes every duplicate tab across all open windows in under a second."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Tab Vacuum work across multiple Chrome windows?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Tab Vacuum dedupes across every open window, then moves the remaining tabs into the window where you clicked the icon."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I group Chrome tabs by website?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tab Vacuum does it automatically. After deduplication it groups remaining tabs by hostname and collapses each group so the tab bar stays clean."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Tab Vacuum free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — free forever, no ads, no premium tier, no account, no subscription. The source code is MIT-licensed on GitHub."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Tab Vacuum collect or send any data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Tab Vacuum reads tab URLs only on your device and only when you click the icon. Nothing is collected, stored, transmitted, or shared. There is no server."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is Tab Vacuum different from OneTab or Workona?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "OneTab and Workona save tab sessions to lists or cloud workspaces. Tab Vacuum does one thing: it dedupes and groups tabs in place, in one click, with no account and no cloud sync."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --bg: #0f0f1e;
+    --bg-2: #1a1a2e;
+    --text: #ffffff;
+    --muted: #b4b4c7;
+    --accent: #8b5cf6;
+    --accent-2: #6366f1;
+    --card: rgba(255,255,255,0.05);
+    --border: rgba(255,255,255,0.1);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+  nav { padding: 24px 0; display: flex; justify-content: space-between; align-items: center; }
+  .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 20px; }
+  .logo img { width: 32px; height: 32px; border-radius: 8px; }
+  nav a { color: var(--muted); text-decoration: none; margin-left: 24px; font-size: 14px; }
+  nav a:hover { color: var(--text); }
+  header { text-align: center; padding: 80px 0 60px; }
+  h1 {
+    font-size: clamp(36px, 6vw, 64px);
+    line-height: 1.1;
+    background: linear-gradient(135deg, #fff 0%, #b4b4c7 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 24px;
+  }
+  .tagline { font-size: clamp(18px, 2.5vw, 22px); color: var(--muted); max-width: 640px; margin: 0 auto 40px; }
+  .cta {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 16px 32px;
+    background: linear-gradient(135deg, var(--accent-2), var(--accent));
+    color: white; text-decoration: none;
+    border-radius: 12px; font-weight: 600; font-size: 16px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.3);
+  }
+  .cta:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(139, 92, 246, 0.4); }
+  .cta-secondary {
+    margin-left: 12px;
+    background: transparent;
+    border: 1px solid var(--border);
+    box-shadow: none;
+  }
+  .demo {
+    margin: 40px auto;
+    max-width: 720px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--card);
+  }
+  .demo img { width: 100%; display: block; }
+  section { padding: 60px 0; }
+  h2 { font-size: clamp(28px, 4vw, 40px); margin-bottom: 32px; text-align: center; }
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+  .feature {
+    padding: 24px; background: var(--card);
+    border: 1px solid var(--border); border-radius: 12px;
+  }
+  .feature-icon { font-size: 32px; margin-bottom: 12px; }
+  .feature h3 { font-size: 18px; margin-bottom: 8px; }
+  .feature p { color: var(--muted); font-size: 14px; }
+  .steps { counter-reset: step; max-width: 640px; margin: 0 auto; }
+  .step {
+    counter-increment: step;
+    padding: 20px 24px 20px 72px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    margin-bottom: 16px; position: relative;
+  }
+  .step::before {
+    content: counter(step);
+    position: absolute; left: 20px; top: 50%; transform: translateY(-50%);
+    width: 36px; height: 36px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-2), var(--accent));
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700;
+  }
+  .faq-item {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    padding: 20px 24px; margin-bottom: 12px;
+  }
+  .faq-item summary { font-weight: 600; cursor: pointer; font-size: 16px; }
+  .faq-item p { color: var(--muted); margin-top: 12px; font-size: 15px; }
+  .compare { overflow-x: auto; }
+  .compare table {
+    width: 100%; border-collapse: collapse;
+    background: var(--card); border-radius: 12px; overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .compare th, .compare td { padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--border); }
+  .compare th { background: rgba(255,255,255,0.03); font-weight: 600; }
+  .compare td:not(:first-child) { text-align: center; }
+  footer {
+    padding: 40px 0; text-align: center;
+    color: var(--muted); font-size: 14px; border-top: 1px solid var(--border);
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <nav>
+    <div class="logo">
+      <img src="../icons/128.png" alt="Tab Vacuum icon" />
+      <span>Tab Vacuum</span>
+    </div>
+    <div>
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://github.com/YOUR-USERNAME/tab-vacuum">GitHub</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Remove duplicate Chrome tabs in 1 click.</h1>
+    <p class="tagline">
+      Tab Vacuum dedupes tabs across <strong>all</strong> your Chrome windows,
+      merges what's left into one window, and groups them by website. Free, private, open source.
+    </p>
+    <a href="https://chrome.google.com/webstore/detail/YOUR-EXTENSION-ID" class="cta">
+      Add to Chrome — Free
+    </a>
+    <a href="https://github.com/YOUR-USERNAME/tab-vacuum" class="cta cta-secondary">
+      Star on GitHub
+    </a>
+
+    <div class="demo">
+      <!-- Replace demo.gif with your real screen recording -->
+      <img src="demo.gif" alt="Tab Vacuum demo: 4 chaotic Chrome windows collapse into one tidy, grouped window in one click" />
+    </div>
+  </header>
+
+  <section id="features">
+    <h2>Why people install it</h2>
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">⚡</div>
+        <h3>Instant</h3>
+        <p>Runs in under a second, even with 200+ tabs. One click, no settings, no dialog.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🔒</div>
+        <h3>100% local</h3>
+        <p>Your tab URLs never leave the browser. No server, no analytics, no tracking.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🪶</div>
+        <h3>Tiny &amp; auditable</h3>
+        <p>~50 lines of code. No dependencies. Read every line on GitHub before you install.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🆓</div>
+        <h3>Free forever</h3>
+        <p>No ads. No premium tier. No upsell. MIT licensed.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <h2>How it works</h2>
+    <div class="steps">
+      <div class="step">You open way too many tabs across way too many Chrome windows.</div>
+      <div class="step">You click the Tab Vacuum icon in your toolbar.</div>
+      <div class="step">Duplicate tabs vanish. Survivors land in one window, grouped by website.</div>
+      <div class="step">You get your sanity (and your RAM) back.</div>
+    </div>
+  </section>
+
+  <section id="compare">
+    <h2>How it compares</h2>
+    <div class="compare">
+      <table>
+        <thead>
+          <tr><th>Feature</th><th>Tab Vacuum</th><th>OneTab</th><th>Workona</th><th>Toby</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Removes duplicates across windows</td><td>✅</td><td>❌</td><td>❌</td><td>❌</td></tr>
+          <tr><td>Groups remaining tabs by site</td><td>✅</td><td>❌</td><td>Manual</td><td>Manual</td></tr>
+          <tr><td>1-click action</td><td>✅</td><td>❌</td><td>❌</td><td>❌</td></tr>
+          <tr><td>Free, no account</td><td>✅</td><td>✅</td><td>❌</td><td>❌</td></tr>
+          <tr><td>Source code auditable</td><td>✅ (50 lines)</td><td>❌</td><td>❌</td><td>❌</td></tr>
+          <tr><td>Sends any data anywhere</td><td>❌ Never</td><td>❌</td><td>✅ Cloud</td><td>✅ Cloud</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2>FAQ</h2>
+    <details class="faq-item">
+      <summary>How do I remove duplicate tabs in Chrome?</summary>
+      <p>Install Tab Vacuum from the Chrome Web Store, click its toolbar icon, and every duplicate tab across all your windows is removed instantly.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Does it work across multiple Chrome windows?</summary>
+      <p>Yes — that's the whole point. Tab Vacuum dedupes across every window, then merges the survivors into the window where you clicked the icon.</p>
+    </details>
+    <details class="faq-item">
+      <summary>How do I group Chrome tabs by website?</summary>
+      <p>Tab Vacuum does it automatically. After deduplication it groups remaining tabs by hostname and collapses each group so your tab bar stays clean.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Will it close my pinned tabs?</summary>
+      <p>Pinned tabs are kept. Duplicates of pinned tabs in <em>other</em> windows are removed.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Does it sync, save, or back up my tabs?</summary>
+      <p>No. Tab Vacuum doesn't store anything. For session backup, use Chrome's built-in History.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Is it really free?</summary>
+      <p>Yes — free forever, no ads, no premium tier, no upsell. The source code is <a href="https://github.com/YOUR-USERNAME/tab-vacuum">MIT-licensed on GitHub</a>.</p>
+    </details>
+    <details class="faq-item">
+      <summary>How is Tab Vacuum different from OneTab or Workona?</summary>
+      <p>OneTab and Workona save tabs to lists or cloud workspaces. Tab Vacuum does one thing: dedupes and groups tabs in place, in one click, with no account and no cloud sync.</p>
+    </details>
+  </section>
+
+  <footer>
+    <p>
+      Tab Vacuum is open source under the
+      <a href="https://github.com/YOUR-USERNAME/tab-vacuum/blob/main/LICENSE">MIT License</a>.
+      &middot;
+      <a href="https://github.com/YOUR-USERNAME/tab-vacuum/blob/main/PRIVACY.md">Privacy</a>
+      &middot;
+      <a href="https://github.com/YOUR-USERNAME/tab-vacuum">GitHub</a>
+    </p>
+  </footer>
+</div>
+
+</body>
+</html>
