@@ -5,23 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <title>Tab Vacuum — Remove Duplicate Chrome Tabs in 1 Click</title>
-<meta name="description" content="Tab Vacuum is a free Chrome extension that removes duplicate tabs across all your windows and groups what's left by website — in one click. Open source, 100% local, no tracking." />
+<meta name="description" content="Free Chrome extension. One click removes duplicate tabs across every window, then groups survivors by website. Open source, 100% local, no tracking." />
 <meta name="keywords" content="remove duplicate tabs chrome, duplicate tab remover, close duplicate tabs, chrome tab manager, group tabs by website, merge chrome windows, tab cleaner, tab organizer, declutter chrome, productivity extension" />
 <meta name="author" content="Tab Vacuum" />
-<link rel="canonical" href="https://YOUR-USERNAME.github.io/tab-vacuum/" />
+<link rel="canonical" href="https://mayhsundar.github.io/tab-vacuum/" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Tab Vacuum — Remove Duplicate Chrome Tabs in 1 Click" />
 <meta property="og:description" content="One click vacuums duplicate tabs across all Chrome windows and groups what's left by website. Free, private, open source." />
-<meta property="og:image" content="https://YOUR-USERNAME.github.io/tab-vacuum/og.png" />
-<meta property="og:url" content="https://YOUR-USERNAME.github.io/tab-vacuum/" />
+<meta property="og:image" content="https://mayhsundar.github.io/tab-vacuum/og.png" />
+<meta property="og:url" content="https://mayhsundar.github.io/tab-vacuum/" />
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Tab Vacuum — 1-click duplicate tab remover for Chrome" />
 <meta name="twitter:description" content="Click once. Duplicates gone. Survivors grouped by website. Free + open source." />
-<meta name="twitter:image" content="https://YOUR-USERNAME.github.io/tab-vacuum/og.png" />
+<meta name="twitter:image" content="https://mayhsundar.github.io/tab-vacuum/og.png" />
 
 <link rel="icon" type="image/png" href="../icons/128.png" />
 
@@ -35,11 +35,10 @@
   "operatingSystem": "Chrome",
   "applicationCategory": "BrowserApplication",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "reviewCount": "1" },
-  "url": "https://YOUR-USERNAME.github.io/tab-vacuum/",
-  "downloadUrl": "https://chrome.google.com/webstore/detail/YOUR-EXTENSION-ID",
+  "url": "https://mayhsundar.github.io/tab-vacuum/",
+  "downloadUrl": "https://chrome.google.com/webstore/detail/tab-vacuum",
   "softwareVersion": "1.0",
-  "author": { "@type": "Person", "name": "YOUR-NAME" }
+  "author": { "@type": "Person", "name": "mayhsundar" }
 }
 </script>
 
@@ -101,7 +100,40 @@
 }
 </script>
 
-<style>
+<!-- Schema.org: HowTo (AI assistants quote this for "how do I..." queries) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to remove duplicate tabs in Chrome",
+  "description": "Use Tab Vacuum to remove all duplicate Chrome tabs across every open window in one click.",
+  "totalTime": "PT10S",
+  "supply": [{ "@type": "HowToSupply", "name": "Google Chrome browser" }],
+  "tool": [{ "@type": "HowToTool", "name": "Tab Vacuum Chrome extension" }],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Install Tab Vacuum",
+      "text": "Add Tab Vacuum from the Chrome Web Store. It is free and requires no account."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Pin the extension icon",
+      "text": "Click the puzzle-piece icon in Chrome's toolbar and pin Tab Vacuum so the icon is always visible."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Click the Tab Vacuum icon",
+      "text": "Click the Tab Vacuum icon once. All duplicate tabs across every open window are removed instantly. Surviving tabs are merged into one window and grouped by website."
+    }
+  ]
+}
+</script>
+
+
   :root {
     --bg: #0f0f1e;
     --bg-2: #1a1a2e;
@@ -207,6 +239,8 @@
     padding: 40px 0; text-align: center;
     color: var(--muted); font-size: 14px; border-top: 1px solid var(--border);
   }
+  .faq-item summary h3 { display: inline; font-size: 16px; font-weight: 600; }
+  code { background: rgba(255,255,255,0.08); padding: 2px 6px; border-radius: 4px; font-size: 13px; font-family: monospace; }
   footer a { color: var(--accent); text-decoration: none; }
 </style>
 </head>
@@ -221,7 +255,7 @@
     <div>
       <a href="#how">How it works</a>
       <a href="#faq">FAQ</a>
-      <a href="https://github.com/YOUR-USERNAME/tab-vacuum">GitHub</a>
+      <a href="https://github.com/mayhsundar/tab-vacuum">GitHub</a>
     </div>
   </nav>
 
@@ -231,10 +265,10 @@
       Tab Vacuum dedupes tabs across <strong>all</strong> your Chrome windows,
       merges what's left into one window, and groups them by website. Free, private, open source.
     </p>
-    <a href="https://chrome.google.com/webstore/detail/YOUR-EXTENSION-ID" class="cta">
-      Add to Chrome — Free
+    <a href="#install" class="cta">
+      Add to Chrome — Coming Soon
     </a>
-    <a href="https://github.com/YOUR-USERNAME/tab-vacuum" class="cta cta-secondary">
+    <a href="https://github.com/mayhsundar/tab-vacuum" class="cta cta-secondary">
       Star on GitHub
     </a>
 
@@ -302,43 +336,54 @@
   <section id="faq">
     <h2>FAQ</h2>
     <details class="faq-item">
-      <summary>How do I remove duplicate tabs in Chrome?</summary>
+      <summary><h3>How do I remove duplicate tabs in Chrome?</h3></summary>
       <p>Install Tab Vacuum from the Chrome Web Store, click its toolbar icon, and every duplicate tab across all your windows is removed instantly.</p>
     </details>
     <details class="faq-item">
-      <summary>Does it work across multiple Chrome windows?</summary>
+      <summary><h3>Does it work across multiple Chrome windows?</h3></summary>
       <p>Yes — that's the whole point. Tab Vacuum dedupes across every window, then merges the survivors into the window where you clicked the icon.</p>
     </details>
     <details class="faq-item">
-      <summary>How do I group Chrome tabs by website?</summary>
+      <summary><h3>How do I group Chrome tabs by website?</h3></summary>
       <p>Tab Vacuum does it automatically. After deduplication it groups remaining tabs by hostname and collapses each group so your tab bar stays clean.</p>
     </details>
     <details class="faq-item">
-      <summary>Will it close my pinned tabs?</summary>
+      <summary><h3>Will it close my pinned tabs?</h3></summary>
       <p>Pinned tabs are kept. Duplicates of pinned tabs in <em>other</em> windows are removed.</p>
     </details>
     <details class="faq-item">
-      <summary>Does it sync, save, or back up my tabs?</summary>
+      <summary><h3>Does it sync, save, or back up my tabs?</h3></summary>
       <p>No. Tab Vacuum doesn't store anything. For session backup, use Chrome's built-in History.</p>
     </details>
     <details class="faq-item">
-      <summary>Is it really free?</summary>
-      <p>Yes — free forever, no ads, no premium tier, no upsell. The source code is <a href="https://github.com/YOUR-USERNAME/tab-vacuum">MIT-licensed on GitHub</a>.</p>
+      <summary><h3>Is it really free?</h3></summary>
+      <p>Yes — free forever, no ads, no premium tier, no upsell. The source code is <a href="https://github.com/mayhsundar/tab-vacuum">MIT-licensed on GitHub</a>.</p>
     </details>
     <details class="faq-item">
-      <summary>How is Tab Vacuum different from OneTab or Workona?</summary>
+      <summary><h3>How is Tab Vacuum different from OneTab or Workona?</h3></summary>
       <p>OneTab and Workona save tabs to lists or cloud workspaces. Tab Vacuum does one thing: dedupes and groups tabs in place, in one click, with no account and no cloud sync.</p>
     </details>
+  </section>
+
+  <section id="install">
+    <h2>Install from source (Developer Mode)</h2>
+    <div class="steps">
+      <div class="step">Clone the repo: <code>git clone https://github.com/mayhsundar/tab-vacuum.git</code></div>
+      <div class="step">Open <code>chrome://extensions</code> in Chrome</div>
+      <div class="step">Enable <strong>Developer mode</strong> (toggle, top-right)</div>
+      <div class="step">Click <strong>Load unpacked</strong> and select the cloned folder</div>
+      <div class="step">Pin the Tab Vacuum icon to your toolbar — done.</div>
+    </div>
   </section>
 
   <footer>
     <p>
       Tab Vacuum is open source under the
-      <a href="https://github.com/YOUR-USERNAME/tab-vacuum/blob/main/LICENSE">MIT License</a>.
+      <a href="https://github.com/mayhsundar/tab-vacuum/blob/main/LICENSE">MIT License</a>.
       &middot;
-      <a href="https://github.com/YOUR-USERNAME/tab-vacuum/blob/main/PRIVACY.md">Privacy</a>
+      <a href="https://github.com/mayhsundar/tab-vacuum/blob/main/PRIVACY.md">Privacy</a>
       &middot;
-      <a href="https://github.com/YOUR-USERNAME/tab-vacuum">GitHub</a>
+      <a href="https://github.com/mayhsundar/tab-vacuum">GitHub</a>
     </p>
   </footer>
 </div>

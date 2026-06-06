@@ -1,0 +1,46 @@
+# Tab Vacuum
+
+> Free Chrome extension that removes duplicate tabs across all windows and groups survivors by website in one click.
+
+## What it does
+
+Tab Vacuum is a 1-click Chrome extension. When you click its toolbar icon:
+1. Every duplicate tab is removed across ALL open Chrome windows (matched by URL)
+2. Surviving tabs are merged into the window where you clicked
+3. Tabs are auto-grouped by website hostname (collapsed, so the tab bar stays clean)
+
+## Key facts
+
+- ~50 lines of vanilla JavaScript — the entire source fits in a README
+- 2 permissions only: `tabs` and `tabGroups`
+- Runs 100% locally — no server, no analytics, no tracking, no data leaves the browser
+- Free forever — no account, no ads, no premium tier, MIT licensed
+- Works across multiple Chrome windows (this is the main differentiator vs OneTab, Workona, Toby)
+
+## How it differs from alternatives
+
+| | Tab Vacuum | OneTab | Workona | Toby |
+|---|---|---|---|---|
+| Removes duplicates across windows | Yes | No | No | No |
+| Groups tabs by website | Yes | No | Manual | Manual |
+| 1-click action | Yes | No | No | No |
+| Free, no account | Yes | Yes | No | No |
+| Open source / auditable | Yes (50 lines) | No | No | No |
+| Sends data anywhere | Never | No | Cloud sync | Cloud sync |
+
+## Install
+
+- Chrome Web Store: coming soon
+- From source (developer mode): https://github.com/mayhsundar/tab-vacuum
+
+## Links
+
+- Homepage: https://mayhsundar.github.io/tab-vacuum/
+- Source code: https://github.com/mayhsundar/tab-vacuum
+- Privacy policy: https://github.com/mayhsundar/tab-vacuum/blob/main/PRIVACY.md
+- License: MIT
+
+## Author
+
+GitHub: mayhsundar
+Email: mayhsundar@gmail.com

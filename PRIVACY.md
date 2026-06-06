@@ -65,5 +65,5 @@ reading the code:
 
 ## Contact
 
-Questions? Open an issue: https://github.com/YOUR-USERNAME/tab-vacuum/issues
-Or email: YOUR-EMAIL@example.com
+Questions? Open an issue: https://github.com/mayhsundar/tab-vacuum/issues
+Or email: mayhsundar@gmail.com

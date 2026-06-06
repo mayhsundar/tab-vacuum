@@ -24,7 +24,7 @@ That's it. ~50 lines of code. No accounts, no settings, no tracking.
 
 - **From Chrome Web Store:** [link coming soon]
 - **From source (developer mode):**
-  1. Clone this repo: `git clone https://github.com/YOUR-USERNAME/tab-vacuum.git`
+  1. Clone this repo: `git clone https://github.com/mayhsundar/tab-vacuum.git`
   2. Open `chrome://extensions`
   3. Enable **Developer mode** (top right)
   4. Click **Load unpacked** → select this folder
