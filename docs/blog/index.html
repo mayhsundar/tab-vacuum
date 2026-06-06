@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Tab Vacuum Blog — Chrome Tab Management Guides</title>
+<meta name="description" content="Practical guides to managing Chrome tabs — dedupe duplicates, auto-group by site, and compare tab manager extensions." />
+<link rel="canonical" href="https://mayhsundar.github.io/tab-vacuum/blog/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Tab Vacuum Blog — Chrome Tab Management Guides" />
+<meta property="og:description" content="Practical guides to managing Chrome tabs." />
+<meta property="og:image" content="https://mayhsundar.github.io/tab-vacuum/og.png" />
+<meta property="og:url" content="https://mayhsundar.github.io/tab-vacuum/blog/" />
+
+<link rel="icon" type="image/png" href="../icons/128.png" />
+
+<style>
+  :root { --bg:#0f0f1e; --bg-2:#1a1a2e; --text:#fff; --muted:#b4b4c7; --accent:#8b5cf6; --accent-2:#6366f1; --card:rgba(255,255,255,0.05); --border:rgba(255,255,255,0.1); }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%); color: var(--text); line-height: 1.6; min-height: 100vh; }
+  .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  nav { padding: 24px 0; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); }
+  .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 18px; color: var(--text); text-decoration: none; }
+  .logo img { width: 28px; height: 28px; border-radius: 6px; }
+  nav .links a { color: var(--muted); text-decoration: none; margin-left: 20px; font-size: 14px; }
+  nav .links a:hover { color: var(--text); }
+  header { padding: 60px 0 30px; }
+  h1 { font-size: clamp(32px, 5vw, 44px); margin-bottom: 12px; }
+  header p { color: var(--muted); font-size: 17px; max-width: 600px; }
+  .posts { padding: 20px 0 60px; display: grid; gap: 16px; }
+  .post { padding: 24px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; text-decoration: none; color: inherit; transition: transform 0.15s, border-color 0.15s; }
+  .post:hover { transform: translateY(-2px); border-color: var(--accent); }
+  .post h2 { font-size: 20px; color: var(--text); margin-bottom: 8px; }
+  .post p { color: var(--muted); font-size: 14px; }
+  .post .read-time { color: var(--accent); font-size: 12px; margin-top: 8px; display: block; }
+  footer { padding: 30px 0; text-align: center; color: var(--muted); font-size: 13px; border-top: 1px solid var(--border); }
+  footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <nav>
+    <a href="../" class="logo">
+      <img src="../icons/128.png" alt="Tab Vacuum" />
+      <span>Tab Vacuum</span>
+    </a>
+    <div class="links">
+      <a href="../">Home</a>
+      <a href="./">Blog</a>
+      <a href="https://github.com/mayhsundar/tab-vacuum">GitHub</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Tab Vacuum Blog</h1>
+    <p>Practical guides to managing Chrome tabs — dedupe duplicates, auto-group by site, and pick the right tab manager for your workflow.</p>
+  </header>
+
+  <div class="posts">
+    <a href="remove-duplicate-tabs-chrome.html" class="post">
+      <h2>How to Remove Duplicate Tabs in Chrome (3 Methods Compared)</h2>
+      <p>Three working ways to dedupe Chrome tabs — manual selection, the tab search panel, and a 1-click extension. Step-by-step with tradeoffs.</p>
+      <span class="read-time">6 min read</span>
+    </a>
+
+    <a href="group-chrome-tabs-by-website.html" class="post">
+      <h2>How to Group Chrome Tabs by Website Automatically</h2>
+      <p>Native Chrome tab groups are manual. Here's how to auto-group tabs by hostname so every site gets its own collapsed group.</p>
+      <span class="read-time">5 min read</span>
+    </a>
+
+    <a href="onetab-vs-tab-vacuum-vs-workona.html" class="post">
+      <h2>OneTab vs Tab Vacuum vs Workona vs Toby: Honest Comparison</h2>
+      <p>The four most popular Chrome tab managers solve different problems. A practical breakdown of which one fits which workflow.</p>
+      <span class="read-time">8 min read</span>
+    </a>
+  </div>
+
+  <footer>
+    <p><a href="../">Tab Vacuum</a> · <a href="https://github.com/mayhsundar/tab-vacuum">GitHub</a> · <a href="https://github.com/mayhsundar/tab-vacuum/blob/main/PRIVACY.md">Privacy</a></p>
+  </footer>
+</div>
+
+</body>
+</html>

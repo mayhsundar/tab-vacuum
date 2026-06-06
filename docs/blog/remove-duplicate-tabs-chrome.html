@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>How to Remove Duplicate Tabs in Chrome (3 Methods Compared, 2026)</title>
+<meta name="description" content="Three ways to remove duplicate tabs in Google Chrome — manual selection, history search, and a 1-click extension. Step-by-step with pros and cons of each." />
+<link rel="canonical" href="https://mayhsundar.github.io/tab-vacuum/blog/remove-duplicate-tabs-chrome.html" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How to Remove Duplicate Tabs in Chrome (3 Methods Compared)" />
+<meta property="og:description" content="Three ways to dedupe Chrome tabs — manual, via history, or 1-click extension. Step-by-step." />
+<meta property="og:image" content="https://mayhsundar.github.io/tab-vacuum/og.png" />
+<meta property="og:url" content="https://mayhsundar.github.io/tab-vacuum/blog/remove-duplicate-tabs-chrome.html" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="How to Remove Duplicate Tabs in Chrome" />
+<meta name="twitter:image" content="https://mayhsundar.github.io/tab-vacuum/og.png" />
+
+<link rel="icon" type="image/png" href="../icons/128.png" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Remove Duplicate Tabs in Chrome (3 Methods Compared)",
+  "description": "Three ways to remove duplicate tabs in Google Chrome, with step-by-step instructions and tradeoffs.",
+  "image": "https://mayhsundar.github.io/tab-vacuum/og.png",
+  "author": { "@type": "Person", "name": "mayhsundar" },
+  "publisher": { "@type": "Organization", "name": "Tab Vacuum" },
+  "datePublished": "2026-06-07",
+  "dateModified": "2026-06-07",
+  "mainEntityOfPage": "https://mayhsundar.github.io/tab-vacuum/blog/remove-duplicate-tabs-chrome.html"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mayhsundar.github.io/tab-vacuum/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mayhsundar.github.io/tab-vacuum/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "Remove Duplicate Tabs in Chrome" }
+  ]
+}
+</script>
+
+<style>
+  :root { --bg:#0f0f1e; --bg-2:#1a1a2e; --text:#fff; --muted:#b4b4c7; --accent:#8b5cf6; --accent-2:#6366f1; --card:rgba(255,255,255,0.05); --border:rgba(255,255,255,0.1); }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%); color: var(--text); line-height: 1.7; min-height: 100vh; }
+  .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  nav { padding: 24px 0; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); }
+  .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 18px; color: var(--text); text-decoration: none; }
+  .logo img { width: 28px; height: 28px; border-radius: 6px; }
+  nav .links a { color: var(--muted); text-decoration: none; margin-left: 20px; font-size: 14px; }
+  nav .links a:hover { color: var(--text); }
+  article { padding: 60px 0 80px; }
+  .breadcrumb { color: var(--muted); font-size: 13px; margin-bottom: 16px; }
+  .breadcrumb a { color: var(--muted); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--accent); }
+  h1 { font-size: clamp(28px, 4.5vw, 40px); line-height: 1.2; margin-bottom: 16px; }
+  .meta { color: var(--muted); font-size: 14px; margin-bottom: 40px; }
+  h2 { font-size: 24px; margin: 40px 0 16px; }
+  h3 { font-size: 18px; margin: 24px 0 12px; color: var(--accent); }
+  p { margin-bottom: 16px; color: var(--muted); }
+  p strong, li strong { color: var(--text); }
+  ul, ol { margin: 0 0 20px 24px; color: var(--muted); }
+  li { margin-bottom: 8px; }
+  code { background: rgba(255,255,255,0.08); padding: 2px 6px; border-radius: 4px; font-size: 13px; font-family: ui-monospace, monospace; color: var(--text); }
+  table { width: 100%; border-collapse: collapse; margin: 20px 0; background: var(--card); border-radius: 8px; overflow: hidden; border: 1px solid var(--border); font-size: 14px; }
+  th, td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+  th { background: rgba(255,255,255,0.03); color: var(--text); font-weight: 600; }
+  td { color: var(--muted); }
+  .cta-box { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin: 40px 0; text-align: center; }
+  .cta-box h3 { color: var(--text); margin-top: 0; }
+  .cta { display: inline-block; padding: 12px 24px; background: linear-gradient(135deg, var(--accent-2), var(--accent)); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 14px; margin-top: 8px; }
+  .cta:hover { transform: translateY(-1px); }
+  .related { margin-top: 60px; padding-top: 30px; border-top: 1px solid var(--border); }
+  .related h2 { margin-top: 0; }
+  .related a { color: var(--accent); text-decoration: none; display: block; margin-bottom: 8px; }
+  .related a:hover { text-decoration: underline; }
+  footer { padding: 30px 0; text-align: center; color: var(--muted); font-size: 13px; border-top: 1px solid var(--border); }
+  footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <nav>
+    <a href="../" class="logo">
+      <img src="../icons/128.png" alt="Tab Vacuum" />
+      <span>Tab Vacuum</span>
+    </a>
+    <div class="links">
+      <a href="../">Home</a>
+      <a href="./">Blog</a>
+      <a href="https://github.com/mayhsundar/tab-vacuum">GitHub</a>
+    </div>
+  </nav>
+
+  <article>
+    <div class="breadcrumb">
+      <a href="../">Home</a> &rsaquo; <a href="./">Blog</a> &rsaquo; Remove Duplicate Tabs in Chrome
+    </div>
+
+    <h1>How to Remove Duplicate Tabs in Chrome (3 Methods Compared)</h1>
+    <p class="meta">Updated June 2026 · 6 min read</p>
+
+    <p>If you're like most heavy Chrome users, you've ended up with the same Stack Overflow question open in three tabs across two windows — at least once today. Chrome has no built-in command for "close all duplicate tabs", so people work around it. Below are the three approaches that actually work, ranked by effort.</p>
+
+    <h2>Method 1: Manual selection (works in seconds for &lt;10 duplicates)</h2>
+    <p>If you only have a handful of duplicates and they're all in the same window, manual selection is the fastest path:</p>
+    <ol>
+      <li>Click the first duplicate tab.</li>
+      <li>Hold <code>Cmd</code> (Mac) or <code>Ctrl</code> (Windows/Linux) and click each additional duplicate tab to add it to the selection.</li>
+      <li>Right-click any selected tab and choose <strong>Close tabs</strong>, or just press <code>Cmd+W</code> / <code>Ctrl+W</code>.</li>
+    </ol>
+    <p><strong>Pros:</strong> Zero install, zero permissions.<br /><strong>Cons:</strong> You have to find the duplicates by eye, and it doesn't work across multiple windows. With 50+ tabs the eye-scan alone takes longer than a fresh start.</p>
+
+    <h2>Method 2: Use Chrome's tab search (works for ~10–30 tabs)</h2>
+    <p>Chrome ships a tab search panel that few users notice:</p>
+    <ol>
+      <li>Click the small <strong>downward chevron</strong> in the top-right corner of the tab bar (or press <code>Cmd+Shift+A</code> / <code>Ctrl+Shift+A</code>).</li>
+      <li>Type a domain or page title.</li>
+      <li>For each duplicate result, click the <strong>×</strong> on the right to close it.</li>
+    </ol>
+    <p><strong>Pros:</strong> Works across <em>all</em> open windows of the same Chrome profile. No install.<br /><strong>Cons:</strong> Manual click-per-tab. There's no "select all results" option. If you have 40 GitHub tabs you'll click 40 times.</p>
+
+    <h2>Method 3: A 1-click extension (works for any number of tabs)</h2>
+    <p>This is the right tool for the job once your tab count is in the dozens or you have multiple windows open. The pattern: an extension reads every tab's URL, drops duplicates, and (in the better ones) tidies the survivors at the same time.</p>
+
+    <p><a href="../">Tab Vacuum</a> is a free, open-source extension built for exactly this. One click on its toolbar icon and:</p>
+    <ul>
+      <li>Every duplicate tab across <strong>all</strong> your Chrome windows is removed (matched by URL).</li>
+      <li>Surviving tabs are merged into the window where you clicked.</li>
+      <li>Remaining tabs are auto-grouped by website hostname, collapsed by default.</li>
+    </ul>
+    <p>The whole extension is ~50 lines of vanilla JavaScript. It runs only when you click — no background activity, no analytics, no server. The two permissions it requests (<code>tabs</code>, <code>tabGroups</code>) are the minimum needed to read URLs and create groups.</p>
+
+    <div class="cta-box">
+      <h3>Try Tab Vacuum</h3>
+      <p>1 click. Duplicate tabs gone. Survivors grouped by site. Free + open source.</p>
+      <a href="../#install" class="cta">Install Tab Vacuum →</a>
+    </div>
+
+    <h2>Side-by-side comparison</h2>
+    <table>
+      <thead>
+        <tr><th>Method</th><th>Speed</th><th>Cross-window</th><th>Install needed</th><th>Best for</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Manual selection</td><td>Slow</td><td>No</td><td>No</td><td>Under ~10 duplicates</td></tr>
+        <tr><td>Tab search panel</td><td>Medium</td><td>Yes</td><td>No</td><td>10–30 tabs</td></tr>
+        <tr><td>Tab Vacuum</td><td>Instant</td><td>Yes</td><td>Yes</td><td>Any tab count</td></tr>
+      </tbody>
+    </table>
+
+    <h2>FAQ</h2>
+    <h3>Does Chrome have a built-in way to close duplicate tabs?</h3>
+    <p>No. As of Chrome 124+ there is no built-in "close duplicates" command. The tab search panel (<code>Cmd+Shift+A</code>) is the closest native feature, but it requires manual closing per result.</p>
+
+    <h3>Will closing duplicate tabs free up RAM?</h3>
+    <p>Yes — significantly. Each Chrome tab uses 50–300 MB depending on the page. Closing 100 duplicate tabs typically frees 5–15 GB of memory.</p>
+
+    <h3>Are duplicate-tab extensions safe?</h3>
+    <p>It depends on the extension's permissions and code transparency. Look for ones that (a) request only <code>tabs</code> and <code>tabGroups</code>, (b) are open-source so you can audit the code, and (c) state clearly that they don't transmit data. Tab Vacuum meets all three — its full source is in the <a href="https://github.com/mayhsundar/tab-vacuum">GitHub repo</a>.</p>
+
+    <div class="related">
+      <h2>Related posts</h2>
+      <a href="group-chrome-tabs-by-website.html">→ How to Group Chrome Tabs by Website Automatically</a>
+      <a href="onetab-vs-tab-vacuum-vs-workona.html">→ OneTab vs Tab Vacuum vs Workona: Which Tab Manager Fits You</a>
+    </div>
+  </article>
+
+  <footer>
+    <p><a href="../">Tab Vacuum</a> · <a href="https://github.com/mayhsundar/tab-vacuum">GitHub</a> · <a href="https://github.com/mayhsundar/tab-vacuum/blob/main/PRIVACY.md">Privacy</a></p>
+  </footer>
+</div>
+
+</body>
+</html>
