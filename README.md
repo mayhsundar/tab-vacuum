@@ -6,7 +6,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Size](https://img.shields.io/badge/code-~50%20lines-brightgreen)](background.js)
 
-![Tab Vacuum demo](docs/og.png)
+![Tab Vacuum demo](docs/demo.gif)
 
 Drowning in 4 windows × 80 tabs, half of them duplicates of the same Stack Overflow page? Tab Vacuum is a 1-click fix.
 
