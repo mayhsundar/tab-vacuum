@@ -13,4 +13,4 @@ This `docs/` folder is the GitHub Pages site for Tab Vacuum.
 ## Assets you still need to add
 
 - `demo.gif` — 15–25 second screen recording showing 4 cluttered Chrome windows collapsing to 1 grouped window on click. Single most important asset.
-- `og.png` — 1200×630 social share image ✅ already generated.
+- `og.jpg` — 1200×630 social share image ✅ already generated.
