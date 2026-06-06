@@ -90,6 +90,14 @@
     },
     {
       "@type": "Question",
+      "name": "Why does Tab Vacuum add entries to my bookmarks bar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tab Vacuum does not create bookmarks and does not request the bookmarks permission. The entries you see are Chrome's Saved Tab Groups feature, which surfaces every tab group as a bookmarks-bar entry. Disable it at chrome://settings (search 'tab groups') by turning off 'Show saved tab groups in bookmarks bar', or right-click any group label and uncheck Save group."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "How is Tab Vacuum different from OneTab or Workona?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -350,6 +358,10 @@
     <details class="faq-item">
       <summary><h3>Will it close my pinned tabs?</h3></summary>
       <p>Pinned tabs are kept. Duplicates of pinned tabs in <em>other</em> windows are removed.</p>
+    </details>
+    <details class="faq-item">
+      <summary><h3>Why does Tab Vacuum add entries to my bookmarks bar?</h3></summary>
+      <p>It doesn't. Tab Vacuum doesn't request the <code>bookmarks</code> permission and the source code never calls the bookmarks API. What you're seeing is Chrome's <strong>Saved Tab Groups</strong> feature (default-on since Chrome 126), which surfaces every tab group as a bookmarks-bar entry. Disable it at <code>chrome://settings</code> → search "tab groups" → turn off <em>Show saved tab groups in bookmarks bar</em>. Or per-group: right-click the colored group label and uncheck <strong>Save group</strong>.</p>
     </details>
     <details class="faq-item">
       <summary><h3>Does it sync, save, or back up my tabs?</h3></summary>

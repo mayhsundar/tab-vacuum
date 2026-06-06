@@ -92,6 +92,9 @@ Yes — that's the whole point. It dedupes across all open windows, then merges 
 **Q: Will it close pinned tabs?**
 Pinned tabs are kept; only duplicates of pinned tabs (in other windows) are removed.
 
+**Q: Tab Vacuum is adding entries to my bookmarks bar — why?**
+Tab Vacuum doesn't touch bookmarks. It doesn't even request the `bookmarks` permission ([see manifest.json](manifest.json)). What you're seeing is Chrome's **Saved Tab Groups** feature (default-on since Chrome 126), which surfaces every tab group as an entry in the bookmarks bar. Disable it at `chrome://settings` → search "tab groups" → turn off "Show saved tab groups in bookmarks bar". Or per-group: right-click the colored group label and uncheck **Save group**.
+
 **Q: What happens to tabs without a URL (loading, blank)?**
 Tabs with empty/blank URLs are treated as distinct and kept.
 
