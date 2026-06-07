@@ -30,7 +30,7 @@ Tab Vacuum is a 1-click Chrome extension. When you click its toolbar icon:
 
 ## Install
 
-- Chrome Web Store: coming soon
+- Chrome Web Store: https://chromewebstore.google.com/detail/tab-vacuum/apdjhdjcejehjiomcolfgfgjhaedoieb
 - From source (developer mode): https://github.com/mayhsundar/tab-vacuum
 
 ## Links

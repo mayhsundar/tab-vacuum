@@ -2,7 +2,7 @@
 
 > **One click — remove duplicate tabs across all Chrome windows and group what's left by website.**
 
-[![Chrome Web Store](https://img.shields.io/badge/Chrome-Web%20Store-4285F4?logo=googlechrome&logoColor=white)](#install)
+[![Chrome Web Store](https://img.shields.io/badge/Chrome-Web%20Store-4285F4?logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/tab-vacuum/apdjhdjcejehjiomcolfgfgjhaedoieb)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Size](https://img.shields.io/badge/code-~50%20lines-brightgreen)](background.js)
 
@@ -22,7 +22,7 @@ That's it. ~50 lines of code. No accounts, no settings, no tracking.
 
 ## Install
 
-- **From Chrome Web Store:** [link coming soon]
+- **From Chrome Web Store:** https://chromewebstore.google.com/detail/tab-vacuum/apdjhdjcejehjiomcolfgfgjhaedoieb
 - **From source (developer mode):**
   1. Clone this repo: `git clone https://github.com/mayhsundar/tab-vacuum.git`
   2. Open `chrome://extensions`
