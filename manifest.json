@@ -1,12 +1,12 @@
 {
   "manifest_version": 3,
-  "name": "Clean Tabs",
-  "version": "1.0",
+  "name": "Tab Vacuum",
+  "version": "1.0.1",
   "description": "One click — remove duplicate tabs across all windows, then group what's left by website.",
   "permissions": ["tabs", "tabGroups"],
   "background": { "service_worker": "background.js" },
   "action": {
-    "default_title": "Clean duplicate tabs",
+    "default_title": "Tab Vacuum — clean duplicate tabs",
     "default_icon": {
       "16": "icons/16.png",
       "48": "icons/48.png",
