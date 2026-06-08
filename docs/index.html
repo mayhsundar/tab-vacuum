@@ -95,6 +95,14 @@
     },
     {
       "@type": "Question",
+      "name": "Does Tab Vacuum work in Edge, Brave, Arc, or other Chromium browsers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. All Chromium-based browsers — Microsoft Edge, Brave, Arc, Vivaldi, Opera — can install the Chrome Web Store version directly. Edge shows an 'Allow extensions from other stores' prompt the first time. A native Microsoft Edge Add-ons listing is in submission. Firefox is not supported yet but a port is straightforward (the extension is 50 lines)."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Why does Tab Vacuum add entries to my bookmarks bar?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -252,6 +260,7 @@
     padding: 40px 0; text-align: center;
     color: var(--muted); font-size: 14px; border-top: 1px solid var(--border);
   }
+  .cta-note { font-size: 13px; color: var(--muted); margin-top: 16px; max-width: 520px; margin-left: auto; margin-right: auto; }
   .faq-item summary h3 { display: inline; font-size: 16px; font-weight: 600; }
   code { background: rgba(255,255,255,0.08); padding: 2px 6px; border-radius: 4px; font-size: 13px; font-family: monospace; }
   footer a { color: var(--accent); text-decoration: none; }
@@ -285,6 +294,10 @@
     <a href="https://github.com/mayhsundar/tab-vacuum" class="cta cta-secondary">
       Star on GitHub
     </a>
+    <p class="cta-note">
+      Edge, Brave, Vivaldi, Arc, and other Chromium browsers can install the Chrome version today.
+      Native Microsoft Edge Add-ons listing coming soon.
+    </p>
 
     <div class="demo">
       <img src="demo.gif" alt="Tab Vacuum: 217 chaotic tabs across 4 Chrome windows collapse into 38 tabs in one tidy grouped window in one click" />
@@ -363,6 +376,10 @@
     <details class="faq-item">
       <summary><h3>Will it close my pinned tabs?</h3></summary>
       <p>Pinned tabs are kept. Duplicates of pinned tabs in <em>other</em> windows are removed.</p>
+    </details>
+    <details class="faq-item">
+      <summary><h3>Does it work in Edge, Brave, Arc, or other Chromium browsers?</h3></summary>
+      <p>Yes. All Chromium-based browsers — Microsoft Edge, Brave, Arc, Vivaldi, Opera — can install the Chrome Web Store version directly. Edge shows an "Allow extensions from other stores" prompt the first time. A native Microsoft Edge Add-ons listing is in submission. Firefox is not supported yet but a port is straightforward (the extension is 50 lines).</p>
     </details>
     <details class="faq-item">
       <summary><h3>Why does Tab Vacuum add entries to my bookmarks bar?</h3></summary>
