@@ -100,7 +100,10 @@ Yes — that's the whole point. It dedupes across all open windows, then merges 
 Yes. Right-click the Tab Vacuum icon → **Options** → toggle on **Current window only**. By default it acts on every open window (the magic-mode behavior). With the toggle on, only the window you clicked in is touched. Setting is stored locally and never syncs.
 
 **Q: Will it close pinned tabs?**
-Pinned tabs are kept; only duplicates of pinned tabs (in other windows) are removed.
+Pinned tabs are kept, regardless of which window they're in; only unpinned duplicates of them are removed. When merging windows, pinned tabs are moved along with the rest and stay pinned. They are left out of grouping.
+
+**Q: Will it touch PWAs (installed web apps) running in their own window?**
+No. Any window that isn't a normal browser window (PWAs opened as app windows, popups, devtools) is left alone: its tabs are not closed, moved or grouped. Unpinned duplicates of a PWA's page in normal windows are removed. A PWA configured to open in a regular tab is just a tab, so it is treated like any other.
 
 **Q: Tab Vacuum is adding entries to my bookmarks bar — why?**
 Tab Vacuum doesn't touch bookmarks. It doesn't even request the `bookmarks` permission ([see manifest.json](manifest.json)). What you're seeing is Chrome's **Saved Tab Groups** feature (default-on since Chrome 126), which surfaces every tab group as an entry in the bookmarks bar. Disable it at `chrome://settings` → search "tab groups" → turn off "Show saved tab groups in bookmarks bar". Or per-group: right-click the colored group label and uncheck **Save group**.

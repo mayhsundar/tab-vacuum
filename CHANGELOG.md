@@ -2,6 +2,14 @@
 
 All notable changes to Tab Vacuum will be documented here. Format roughly follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) with [SemVer](https://semver.org/) versioning.
 
+## [Unreleased]
+
+### Fixed
+- Pinned tabs could be closed as duplicates when an unpinned copy of the same URL was in an earlier window (#2). Pinned tabs are now always kept, claim their URL before deduping, stay pinned when merged into the clicked window (moving one used to unpin it), and are skipped when grouping.
+
+### Changed
+- Tabs in non-normal windows (PWAs running in their own window, popups, devtools) are no longer closed, moved or grouped (#1). Unpinned duplicates of their pages in normal windows are still removed.
+
 ## [1.1.0] — 2026-06-19
 
 ### Added

@@ -383,7 +383,11 @@
     </details>
     <details class="faq-item">
       <summary><h3>Will it close my pinned tabs?</h3></summary>
-      <p>Pinned tabs are kept. Duplicates of pinned tabs in <em>other</em> windows are removed.</p>
+      <p>Pinned tabs are kept, in any window. Only unpinned duplicates of them are removed, and pinned tabs are never grouped.</p>
+    </details>
+    <details class="faq-item">
+      <summary><h3>Will it touch PWAs running in their own window?</h3></summary>
+      <p>No. Installed web apps (PWAs) that open in their own window, along with popups and devtools windows, are left alone. Unpinned duplicates of their pages in normal windows are removed.</p>
     </details>
     <details class="faq-item">
       <summary><h3>Can I limit Tab Vacuum to only the current window?</h3></summary>
